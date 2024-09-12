@@ -34,14 +34,14 @@ SELECT * FROM `exams` WHERE `date` = '2020-06-20' AND `hour` >= '14:00';
 SELECT * FROM `degrees` WHERE `level` = 'magistrale';
 
 7. Da quanti dipartimenti è composta l'università? (12)
-SELECT * FROM `departments`;
+SELECT COUNT(*) FROM `departments`;
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-SELECT * FROM `teachers` WHERE `phone` IS NOT NULL;
+SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NOT NULL;
 
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
 degree_id, inserire un valore casuale)
-INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES ('5001', '18', 'Marianna', 'Coppa', '1995-05-30', 'DOFNKT95E70F865X', '2014-09-01', '625999', 'stenella@gmail.com');
+INSERT INTO `students` (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES ('18', 'Marianna', 'Coppa', '1995-05-30', 'DOFNKT95E70F865X', '2014-09-01', '625999', 'stenella@gmail.com');
 
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 UPDATE `teachers` SET `office_number` = '126' WHERE `name` = 'Pietro' AND `surname` = 'Rizzo';
