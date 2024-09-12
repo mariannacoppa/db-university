@@ -44,4 +44,6 @@ degree_id, inserire un valore casuale)
 INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES ('5001', '18', 'Marianna', 'Coppa', '1995-05-30', 'DOFNKT95E70F865X', '2014-09-01', '625999', 'stenella@gmail.com');
 
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+UPDATE `teachers` SET `office_number` = '126' WHERE `name` = 'Pietro' AND `surname` = 'Rizzo';
+
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
