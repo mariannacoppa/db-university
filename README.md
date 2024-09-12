@@ -47,3 +47,4 @@ INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `
 UPDATE `teachers` SET `office_number` = '126' WHERE `name` = 'Pietro' AND `surname` = 'Rizzo';
 
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+DELETE FROM `students` WHERE `name` = 'Marianna' AND `surname` = 'Coppa' AND `email` = 'stenella@gmail.com';
