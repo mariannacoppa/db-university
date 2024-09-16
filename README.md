@@ -76,3 +76,6 @@ SELECT `students`.`surname`, `students`.`name`, `students`.`registration_number`
 
 2. Selezionare tutti i corsi di Laurea del Dipartimento di Neuroscienze
 SELECT `degrees`.`name`, `degrees`.`level` FROM `degrees` JOIN `departments` ON `departments`.`id` = `degrees`.`department_id` WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`level` = 'magistrale';
+
+3. Selezionare tutti i corsi in cui insegna Fulvio Amato
+SELECT `courses`.`name`, `courses`.`id` FROM `courses` JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id` JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id` WHERE `teachers`.`name` = 'Fulvio' AND `teachers`.`surname` = 'Amato';
