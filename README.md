@@ -73,3 +73,6 @@ QUERY CON JOIN
 
 1. Selezionare tutti gli studenti iscritti al corso di Laurea in Economia
 SELECT `students`.`surname`, `students`.`name`, `students`.`registration_number`, `students`.`enrolment_date` FROM `students` JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+
+2. Selezionare tutti i corsi di Laurea del Dipartimento di Neuroscienze
+SELECT `degrees`.`name`, `degrees`.`level` FROM `degrees` JOIN `departments` ON `departments`.`id` = `degrees`.`department_id` WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`level` = 'magistrale';
