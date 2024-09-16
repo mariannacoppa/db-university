@@ -53,3 +53,6 @@ QUERY CON GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
 SELECT COUNT(*) AS `numeroStudenti`, YEAR(`enrolment_date`) AS `anno` FROM `students` GROUP BY `anno`;
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT COUNT(*) AS `numeroInsegnanti`, `office_address` FROM `teachers` GROUP BY `office_address`;
