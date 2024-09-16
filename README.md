@@ -49,6 +49,9 @@ UPDATE `teachers` SET `office_number` = '126' WHERE `name` = 'Pietro' AND `surna
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
 DELETE FROM `students` WHERE `name` = 'Marianna' AND `surname` = 'Coppa' AND `email` = 'stenella@gmail.com';
 
+
+
+
 QUERY CON GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
@@ -62,3 +65,11 @@ SELECT AVG(`vote`) AS `media_voto`, `exam_id` FROM `exam_student` GROUP BY `exam
 
 4. Contare quanti corsi di Laurea ci sono per ogni Dipartimento
 SELECT COUNT(*) AS `numero_corsi_di_laurea`, `department_id` FROM `degrees` GROUP BY `department_id`;
+
+
+
+
+QUERY CON JOIN
+
+1. Selezionare tutti gli studenti iscritti al corso di Laurea in Economia
+SELECT `students`.`surname`, `students`.`name`, `students`.`registration_number`, `students`.`enrolment_date` FROM `students` JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
