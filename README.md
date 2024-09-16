@@ -52,4 +52,4 @@ DELETE FROM `students` WHERE `name` = 'Marianna' AND `surname` = 'Coppa' AND `em
 QUERY CON GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
-SELECT * FROM `students` GROUP BY `enrolment_date`;
+SELECT COUNT(*) AS `numeroStudenti`, YEAR(`enrolment_date`) AS `anno` FROM `students` GROUP BY `anno`;
